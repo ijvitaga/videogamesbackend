@@ -75,11 +75,12 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+  production:
+    <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: games_app_api_production
-  username: games_app_api
-  password: <%= ENV['GAMES_APP_API_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: games_app_api_production
+#   username: games_app_api
+#   password: <%= ENV['GAMES_APP_API_DATABASE_PASSWORD'] %>
